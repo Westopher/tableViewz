@@ -46,8 +46,10 @@ class ChecklistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
+    
     //number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -68,12 +70,12 @@ class ChecklistViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
         
         let item = items[indexPath.row]
-        configureText(for: cell with: item)
+        configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
         return cell
     }
 
-    func configureText(for cell: UITableViewCell, with item: Checklist Item) {
+    func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
