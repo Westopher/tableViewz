@@ -11,7 +11,18 @@ import UIKit
 class ChecklistViewController: UITableViewController {
 
     @IBAction func addItem(_ sender: Any) {
-        print("item added")
+        let newRowIndex = items.count
+        
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        item.checked = false
+        
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .bottom)
+        
     }
     
     var items: [ChecklistItem]
@@ -51,6 +62,19 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    //enabling delete
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        items.remove(at: indexPath.row)
+        
+//        To use animation, do it this way
+//        let indexPaths = [indexPath]
+//        tableView.deleteRows(at: indexPaths, with: .fade)
+        
+        // Without animation, do it this way.
+        tableView.reloadData()
     }
     
     //number of rows
