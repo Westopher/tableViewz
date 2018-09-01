@@ -10,6 +10,10 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
 
+    @IBAction func addItem(_ sender: Any) {
+        print("item added")
+    }
+    
     var items: [ChecklistItem]
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,7 +51,6 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        
     }
     
     //number of rows
