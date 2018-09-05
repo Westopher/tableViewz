@@ -10,6 +10,8 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
 
+    var items: [ChecklistItem]
+    
     @IBAction func addItem(_ sender: Any) {
         let newRowIndex = items.count
         
@@ -25,7 +27,7 @@ class ChecklistViewController: UITableViewController {
         
     }
     
-    var items: [ChecklistItem]
+    
     
     required init?(coder aDecoder: NSCoder) {
         
