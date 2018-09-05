@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1044" y="144.3778110944528"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Title-->
         <scene sceneID="DZk-Q8-f2i">
             <objects>
-                <tableViewController id="1BC-pV-xpK" sceneMemberID="viewController">
+                <tableViewController id="1BC-pV-xpK" customClass="AddItemViewController" customModule="tableViewz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3iC-s1-GlP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,10 @@
                             <outlet property="delegate" destination="1BC-pV-xpK" id="Ce4-5M-XdE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Imt-Jb-ban">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="87S-3d-faw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ge8-Lv-aed"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ki-r0-n3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
