@@ -78,8 +78,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Imt-Jb-ban">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="87S-3d-faw"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ge8-Lv-aed"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="87S-3d-faw">
+                            <connections>
+                                <action selector="cancel" destination="1BC-pV-xpK" id="0ws-ls-Yz1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ge8-Lv-aed">
+                            <connections>
+                                <action selector="done" destination="1BC-pV-xpK" id="YgB-PQ-lYb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ki-r0-n3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
